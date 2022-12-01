@@ -1,3 +1,6 @@
+package bankaccount;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -11,14 +14,14 @@ class BankAccountAssertionsTest {
     void testWithdrawNotStuckAtZero() {
         BankAccount bankAccount = new BankAccount(500, -1000);
         bankAccount.withdraw(800);
-        assertNotEquals(0, bankAccount.getBalance());
+        Assertions.assertNotEquals(0, bankAccount.getBalance());
     }
 
     @Test
     @DisplayName("Test activation account after creation")
     void testActive() {
         BankAccount bankAccount = new BankAccount(500, -1000);
-        assertTrue(bankAccount.isActive());
+        Assertions.assertTrue(bankAccount.isActive());
     }
 
     @Test
@@ -47,6 +50,6 @@ class BankAccountAssertionsTest {
     @DisplayName("Test no exceptions for withdraw and deposit")
     void testDepositTimeout() {
         BankAccount bankAccount = new BankAccount(400, 0);
-        assertTimeout(Duration.ofNanos(1), () -> bankAccount.deposit(200));
+        Assertions.assertTimeout(Duration.ofNanos(1), () -> bankAccount.deposit(200));
     }
 }

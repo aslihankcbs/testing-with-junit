@@ -1,3 +1,6 @@
+package bankaccount;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -22,7 +25,7 @@ class BankAccountTimeoutTest {
         }
 
         bankAccount.deposit(300);
-        assertEquals(300, bankAccount.getBalance());
+        Assertions.assertEquals(300, bankAccount.getBalance());
     }
 
     @Test

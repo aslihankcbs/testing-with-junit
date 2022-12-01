@@ -1,3 +1,6 @@
+package bankaccount;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -10,6 +13,6 @@ class BankAccountDITest {
     @DisplayName("Deposit 500 successfully")
     void testDeposit(BankAccount bankAccount) {
         bankAccount.deposit(500);
-        assertEquals(500, bankAccount.getBalance());
+        Assertions.assertEquals(500, bankAccount.getBalance());
     }
 }

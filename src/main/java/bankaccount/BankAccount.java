@@ -1,3 +1,5 @@
+package bankaccount;
+
 public class BankAccount {
     private double balance;
     private double minimumBalance;

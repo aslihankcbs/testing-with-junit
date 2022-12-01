@@ -1,3 +1,6 @@
+package bankaccount;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -11,6 +14,6 @@ class BankAccountAssumptionsTest {
         BankAccount bankAccount = new BankAccount(500, 0);
 //        assumeTrue(bankAccount == null);
 //        assumeFalse(bankAccount == null);
-        assumingThat(bankAccount == null, () -> assertTrue(bankAccount.isActive()));
+        assumingThat(bankAccount == null, () -> Assertions.assertTrue(bankAccount.isActive()));
     }
 }

@@ -1,7 +1,6 @@
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
+package bankaccount;
+
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -13,13 +12,13 @@ class BankAccountOrderedExecutionTest {
     @Order(2)
     void testWithdraw() {
         bankAccount.withdraw(300);
-        assertEquals(200, bankAccount.getBalance());
+        Assertions.assertEquals(200, bankAccount.getBalance());
     }
 
     @Test
     @Order(1)
     void testDeposit() {
         bankAccount.deposit(500);
-        assertEquals(500, bankAccount.getBalance());
+        Assertions.assertEquals(500, bankAccount.getBalance());
     }
 }

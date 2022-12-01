@@ -1,3 +1,6 @@
+package bankaccount;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -18,7 +21,7 @@ class BankAccountParallelExecutionTest {
             e.printStackTrace();
         }
         bankAccount.deposit(500);
-        assertEquals(500, bankAccount.getBalance());
+        Assertions.assertEquals(500, bankAccount.getBalance());
     }
 
     @Test
@@ -30,7 +33,7 @@ class BankAccountParallelExecutionTest {
             e.printStackTrace();
         }
         bankAccount.deposit(500);
-        assertEquals(500, bankAccount.getBalance());
+        Assertions.assertEquals(500, bankAccount.getBalance());
     }
 
     @Test
@@ -42,6 +45,6 @@ class BankAccountParallelExecutionTest {
             e.printStackTrace();
         }
         bankAccount.deposit(500);
-        assertEquals(500, bankAccount.getBalance());
+        Assertions.assertEquals(500, bankAccount.getBalance());
     }
 }

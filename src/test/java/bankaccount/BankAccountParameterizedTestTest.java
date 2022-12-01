@@ -1,9 +1,10 @@
+package bankaccount;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
-import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -19,7 +20,7 @@ class BankAccountParameterizedTestTest {
     @DisplayName("Deposit 500 successfully")
     void testDeposit(int amount, BankAccount bankAccount) {
         bankAccount.deposit(amount);
-        assertEquals(amount, bankAccount.getBalance());
+        Assertions.assertEquals(amount, bankAccount.getBalance());
     }
 
     @ParameterizedTest
@@ -34,7 +35,7 @@ class BankAccountParameterizedTestTest {
     void depositAndNameTest(double amount, String name, BankAccount bankAccount) {
         bankAccount.deposit(amount);
         bankAccount.setHolderName(name);
-        assertEquals(amount, bankAccount.getBalance());
-        assertEquals(name, bankAccount.getHolderName());
+        Assertions.assertEquals(amount, bankAccount.getBalance());
+        Assertions.assertEquals(name, bankAccount.getHolderName());
     }
 }

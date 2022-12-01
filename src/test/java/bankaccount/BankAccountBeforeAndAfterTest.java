@@ -1,3 +1,5 @@
+package bankaccount;
+
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -15,13 +17,13 @@ class BankAccountBeforeAndAfterTest {
     @Test
     void testWithdraw() {
         bankAccount.withdraw(300);
-        assertEquals(200, bankAccount.getBalance());
+        Assertions.assertEquals(200, bankAccount.getBalance());
     }
 
     @Test
     void testDeposit() {
         bankAccount.deposit(500);
-        assertEquals(700, bankAccount.getBalance());
+        Assertions.assertEquals(700, bankAccount.getBalance());
     }
 
     @AfterAll
