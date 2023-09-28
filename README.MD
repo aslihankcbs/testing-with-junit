@@ -1,1 +1,1 @@
-Same examples about JUnit and Mockito
+Simple examples about JUnit and Mockito
